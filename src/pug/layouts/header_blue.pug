@@ -1,0 +1,23 @@
++b.HEADER.header._blue
+	+e.wrap.wrap
+		+e.row.flex._vertical._justify
+			+e.A.logo(href="/main.html")
+				+e.IMG.logo-img(src="/app/img/logo.svg")
+				+e.logo-info
+					+e.logo-title
+						strong ВАШ-ИСК
+						| .РФ
+					+e.logo-desc.small Портал составления исковых заявлений
+			+e.right.flex._vertical._right
+				+e.select
+					select(name="for")
+						option(checked="checked") Для граждан
+						option Для юр. лиц
+						option Для физ. лиц
+					+e.select-arrow
+						+icon('down')
+				+e.location
+					+e.location-icon
+						+icon('location')
+					+e.location-adress.small
+						| Александровск-Сахалинский

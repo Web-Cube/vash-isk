@@ -1,0 +1,33 @@
+.preview-section {
+	overflow: hidden;
+	&__gerb {
+		position: absolute;
+		right: -170rem;
+		top: 0;
+		width: 679rem;
+	}
+	
+	@include max-screen($large_tablet) {
+		&__gerb {
+			width: 295px;
+			right: -120px;
+		}
+	}
+	@include max-screen($small_mobile) {
+		&__gerb {
+			width: 265px;
+		}
+	}
+}
+
+.gerb {
+	&.is-animate {
+		opacity: 0;
+		transition: ease 1s;
+		transform: scale(.5);
+		&.show {
+			opacity: .85;
+			transform: scale(1);
+		}
+	}
+}

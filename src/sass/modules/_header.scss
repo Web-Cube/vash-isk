@@ -1,0 +1,133 @@
+.header {
+	padding: 21rem 0 21rem 0;
+	&_blue {
+		color: #fff;
+		background: $blue;
+		.header {
+			&__select {
+				select {
+					color: #fff;
+					option {
+						color: #000;
+					}
+				}
+				&-arrow {
+					stroke: #fff;
+				}
+			}
+			&__location {
+				&-icon {
+					fill: #fff;
+				}
+			}
+		}
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		&-img {
+			width: 60rem;
+			min-width: 60rem;
+			margin-right: 20rem;
+		}
+		&-info, &-title, &-desc {
+			display:block; 
+		}
+		&-title {
+			font-family: 'Lato';
+			font-size: 25rem;
+			line-height: 25/30*1;
+			font-weight: 300;
+			margin-bottom: 3px;
+		}
+	}
+	&__select {
+		position: relative;
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			padding-right: 18rem;
+			height: 17rem;
+			background: none;
+			border: 0;
+			font-size: 14rem;
+			line-height: 17/14*1;
+			font-family: 'Inter';
+			letter-spacing: -0.01em;
+		}
+		&-arrow {
+			width: 12rem;
+			height: 6em;
+			fill: none;
+			stroke: $black;
+			stroke-width: 1.5;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -2rem;
+		}
+	}
+	&__location {
+		display: flex;
+		align-items: center;
+		margin-left: 30rem;
+		&-icon {
+			width: 12px;
+			min-width: 12px;
+			height: 15px;
+			margin-right: 7px;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&__right {
+			max-width: 250px;
+		}
+		&__select {
+			order: 2;
+			margin-top: 10rem;
+		}
+		&__location {
+			order: 1;
+			margin-left: 0;
+			&-adress {
+				order: 1;
+			}
+			&-icon {
+				order: 2;
+				margin-right: 0;
+				margin-left: 10px;
+			}
+		}
+		&__logo {
+			&-title {
+				font-size: 20px;
+				line-height: 24px;
+				letter-spacing: 0.05em;
+			}
+			&-desc {
+				font-size: 11px;
+				line-height: 13px;
+				letter-spacing: normal;
+			}
+		}
+	}
+	@include max-screen($large_mobile) {
+		padding: 15px 0;
+		&__right {
+			max-width: none;
+			width: 100%;
+			margin-top: 5px;
+			justify-content: space-between;
+		}
+		&__select {
+			margin-top: 0;
+			order: 1;
+		}
+		&__location {
+			order: 2;
+			margin-top: 2px;
+		}
+	}
+}

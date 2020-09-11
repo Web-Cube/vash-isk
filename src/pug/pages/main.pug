@@ -1,0 +1,94 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Главная';
+
+block content
+	include ../layouts/header_blue
+	+b.preview-section.css-light-bg
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+e.service.service-preview__._main
+				+e.H1.title.h1.css-color-black
+					| Составление искового 
+					br
+					| заявления для подачи в суд
+				+e.list.flex
+					+e.A.list-item.js-animateme.is-animate._up(href="/service.html",data-animate-class="show")
+						+e.list-title.h3 Расторжение брака
+					+e.A.list-item.js-animateme.is-animate._up(href="#",data-animate-class="show",data-animate-delay="300")
+						+e.list-title.h3 Взыскание алиментов на ребенка
+						+e.list-desc.small.css-color-gray В разработке
+					+e.A.list-item.js-animateme.is-animate._up(href="#",data-animate-class="show",data-animate-delay="500")
+						+e.list-title.h3 Защита прав потребителей
+						+e.list-desc.small.css-color-gray В разработке
+	+b.work
+		+e.wrap.wrap
+			+e.head.flex._vertical._justify
+				+e.H2.title.h2 Работа портала
+				+e.nav.js-work-nav.owl-nav
+			+e.list.flex._justify.js-wrapSlider(data-settings='{"smartSpeed": 500, "nav": true, "loop": false, "autoWidth":true, "margin": 10, "navContainer": ".js-work-nav"}', data-resolution="1024")
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img1.svg")
+						+e.number 1
+					+e.text.p
+						| Выбираете услугу
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img2.svg")
+						+e.number 2
+					+e.text.p
+						| Заполняете онлайн бланк с вопросами
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img3.svg")
+						+e.number 3
+					+e.text.p
+						| Получаете готовое
+						br
+						| исковое заявление 
+						br
+						| в суд
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img4.svg")
+						+e.number 4
+					+e.text.p
+						| Отправляете документы почтой, либо лично приносите в суд
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img5.svg")
+						+e.number 5
+					+e.text.p
+						| Получаете 
+						br
+						| решение суда
+	+b.service-info.css-light-bg
+		+e.wrap.wrap
+			+e.box.flex
+				+e.column._content.content.css-medium-bg
+					+e.top
+						h2
+							| Портал составления исковых заявлений
+						p
+							| для жителей Московской области.
+					+e.center
+						p
+							| ВАШ-ИСК.РФ — единый портал составления исковых заявлений (ЕПСИЗ), создан для помощи гражданам при подаче заявлений в судебные инстанции.
+						p
+							| На основе заполненного Вами онлайн бланка вопросов составляется персонализированное заявление для подачи в суд, с учетом всех изложенных фактов.
+						p
+							| Сервисом будет определена подсудность, будут даны ссылки на актуальное законодательство, будет сформирован готовый пакет документов. Документы в суд можно будет отправить почтой, на заседание можно не ходить, вы получите решение суда дистанционно. 
+				+e.column._result.content
+					+e.top
+						h2.css-color-blue 14 423 
+						p
+							| исковых заявлений
+					+e.center
+						p
+							| уже составлено с помощью 
+							br
+							| интернет-портала ВАШ-ИСК.РФ.
+					+e.bottom.verysmall.css-color-gray
+						| по данным на 10.10.2020, 19:43

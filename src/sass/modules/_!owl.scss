@@ -1,0 +1,33 @@
+.owl {
+	
+	&-nav {
+		display:flex;
+		justify-content: space-between;
+		width: 56px;
+	}
+	
+	&-prev, &-next {
+		border: 0;
+		background: none;
+		width: 16px;
+		height: 29px;
+		fill: none;
+		stroke: $blue;
+		stroke-width: 2px;
+		cursor: pointer;
+		transition: ease .2s;
+		&.disabled  {
+			opacity: .3;
+		}
+	}
+	
+	&-progress {
+		height: 1px;
+		background: #F1F1F1;
+		&-bar {
+			height: 1px;
+			background: #000;
+			transition: ease .2s;
+		}
+	}
+}
