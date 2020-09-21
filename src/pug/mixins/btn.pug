@@ -1,0 +1,8 @@
+mixin btn(href="#", icon)
+	+e.A.btn.btn__(href=href)&attributes(attributes)
+		if icon
+			+e.icon
+				+icon(icon)
+		if block
+			+e.text
+				block

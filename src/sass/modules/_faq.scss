@@ -1,0 +1,111 @@
+.faq {
+	background: #F0F4F8;
+	padding: 60rem 0;
+	border-top: 1px solid #AAC8E6;
+	&__list {
+		margin: 0 -15rem;
+		padding-top: 10rem;
+	}
+	&__column {
+		padding: 0 15rem;
+		margin-top: 30rem;
+		width: 50%;
+	}
+	&__item {
+		background: #FFF;
+		box-shadow: 0px 20px 20px rgba(199, 215, 226, 0.5);
+		border-radius: 10px;
+		&-head {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			min-height: 64px;
+			justify-content: space-between;
+			cursor: pointer;
+			padding: 20rem 30rem;
+		}
+		&-arrow {
+			width: 18rem;
+			min-width: 18rem;
+			margin-left: 20rem;
+			height: 10rem;
+			fill: none;
+			stroke: $blue;
+			transition: ease .2s;
+		}
+		&-content {
+			padding: 20rem 30rem 30rem 30rem;
+			border-top: 1px solid #AAC8E6;
+			display: none;
+			p {
+				font-size: 14px;
+				line-height: 17px;
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		&.is-active {
+			.faq__item {
+				&-arrow {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	
+	@include max-screen($large_tablet) {
+		&__list {
+			margin: 0 -10px;
+			padding-top: 10px;
+		}
+		&__column {
+			padding: 0 10px;
+			margin-top: 20px;
+		}
+		&__item {
+			&-head {
+				padding: 10px 20px;
+			}
+			&-content {
+				padding: 15px 20px 20px 20px;
+			}
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		padding: 40px 0;
+		&__column {
+			width: 100%;
+		}
+	}
+	
+	@include max-screen($large_mobile) {
+		&__list {
+			padding-top: 20px;
+		}
+		&__column {
+			margin-top: 10px;
+		}
+		&__item {
+			&-head {
+				min-height: 54px;
+			}
+			&-title {
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: -0.03em;
+			}
+			&-content {
+				p {
+					font-size: 12px;
+					line-height: 15px;
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+	
+}

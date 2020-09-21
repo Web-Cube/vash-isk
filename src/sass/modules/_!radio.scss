@@ -1,0 +1,38 @@
+.radio {
+	display: flex;
+	font-size: 16px;
+	cursor: pointer;
+	&__input {
+		display: none;
+		&:checked + .radio__icon {
+			&:before {
+				opacity: 1;
+			}
+		}
+		&:checked + .radio__icon + .radio__text {
+			color: $blue;
+		}
+	}
+	&__icon {
+		width: 20px;
+		min-width: 20px;
+		height: 20px;
+		background: #fff;
+		border: 1px solid $blue;
+		border-radius: 100%;
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			content: '';
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			background: $blue;
+			transition: ease .2s;
+			opacity: 0;
+		}
+	}
+}

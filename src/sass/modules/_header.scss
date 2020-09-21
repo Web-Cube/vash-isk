@@ -22,6 +22,29 @@
 			}
 		}
 	}
+	&_white {
+		color: $blue;
+		background: #fff;
+		border-bottom: 1px solid #AAC8E6;
+		.header {
+			&__select {
+				select {
+					color: $blue;
+					option {
+						color: #000;
+					}
+				}
+				&-arrow {
+					stroke: $blue;
+				}
+			}
+			&__location {
+				&-icon {
+					fill: $blue;
+				}
+			}
+		}
+	}
 	&__logo {
 		display: flex;
 		align-items: center;

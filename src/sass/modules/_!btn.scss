@@ -1,0 +1,64 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	border: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	padding: 0 20rem;
+	transition: ease .2s;
+	text-decoration: none;
+	&_blue {
+		background: $blue;
+		color: #fff;
+	}
+	&_big {
+		height: 79rem;
+		font-size: 16rem;
+		line-height: 19/16*1;
+		border-radius: 10px;
+	}
+	
+	&_middle {
+		height: 57rem;
+		font-size: 14px;
+		letter-spacing: 0.1em;
+		border-radius: 5px;
+	}
+	
+	&_white {
+		background: #fff;
+		color: $blue;
+		filter: drop-shadow(0px 10px 10px rgba(199, 215, 226, 0.25));
+	}
+	
+	&_green {
+		background: $green;
+		color: #fff;
+	}
+	
+	&.is-disabled {
+		background: #AAC8E6;
+		color: $blue;
+	}
+	
+	@include max-screen($large_tablet) {
+		
+		&_big {
+			font-size: 14px;
+			line-height: 17px;
+			height: 57px;
+			border-radius: 5px;
+		}
+		
+	}
+	
+	@include max-screen($large_mobile) {
+		&__hide-text {
+			display: none;
+		}
+	}
+}

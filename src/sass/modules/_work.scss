@@ -1,6 +1,6 @@
 .work {
 	padding: 60rem 0;
-	
+	border-top: 1px solid #AAC8E6;
 	&__list {
 		margin-top: 30rem;
 		margin-left: -15px;
@@ -46,6 +46,10 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
+	}
+	
+	&__desc {
+		margin-top: 10px;
 	}
 	
 	@include max-screen($large_tablet) {

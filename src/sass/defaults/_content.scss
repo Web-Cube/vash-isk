@@ -7,6 +7,15 @@
 	letter-spacing: -0.01em;
 }
 
+.content {
+	p, ul {
+		margin-top: 30px;	
+	}
+	ul {
+		margin-left: 20px;
+	}
+}
+
 .small {
 	font-size: 14rem;
 	line-height: 17/14*1;
@@ -39,8 +48,10 @@
 	font-weight: bold;
 }
 
-.content a,
-.a {
+.content a:not([class]),
+.a:not([class]), a:not([class]) {
+	color: $blue;
+	text-decoration: underline;
 }
 
 .h1,

@@ -1,0 +1,208 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Страница услуги';
+
+block content
+	include ../layouts/header_white
+	+b.preview-section.css-light-bg
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+e.service.service-preview__._page
+				+e.top
+					+e.before-heading.before-heading.css-color-blue Описание услуги:
+					+e.H1.title.h1.css-color-black
+						| Оформление готового искового заявления в суд и всех сопутствующих документов
+					+e.code.h4.css-color-gray Идентификатор услуги: АА-478
+					+e.desc.p
+						| Документы в суд можно будет отправить почтой (инструкцию мы предоставим), на заседание можно не ходить — Вы получите развод дистанционно.
+					+e.action.flex._vertical
+						+btn(href="#form", class="_blue _big js-scroll-to") Составить иск
+						+btn(href="#form", class="_white _big js-scroll-to") Проверить возможность развода
+					+e.row.flex
+						+e.box
+							+e.box-title.before-heading.css-color-blue Стоимость:
+							+e.box-head
+								+e.box-logo
+									img(src="/app/img/logo.svg")
+								+e.box-name.h3 ВАШ-ИСК.РФ
+							+e.box-scale
+								+e.box-strip(style="width: 27%")
+							+e.box-text.p
+								strong 2 390 
+								| руб.
+						+e.box
+							+e.box-title.before-heading.css-color-blue Срок выполнения услуги:
+							+e.box-head
+								+e.box-logo
+									img(src="/app/img/logo.svg")
+								+e.box-name.h3 ВАШ-ИСК.РФ
+							+e.box-scale
+								+e.box-strip(style="width: 12%")
+							+e.box-text.p
+								strong 10 — 20 минут
+						+e.box
+							+e.box-head
+								+e.box-icon
+								+e.box-name.p Через адвоката
+							+e.box-scale
+								+e.box-strip(style="width: 12%")
+							+e.box-text.p
+								strong 5 734 
+								| руб. в среднем по
+								br
+								a(href="#") Московской области
+						+e.box
+							+e.box-head
+								+e.box-icon
+								+e.box-name.p Через адвоката
+							+e.box-scale
+								+e.box-strip(style="width: 12%")
+							+e.box-text.p
+								| от 5-ти рабочих
+								strong дней
+	+b.work
+		+e.wrap.wrap
+			+e.head.flex._vertical._justify
+				+e.left
+					+e.H2.title.h2 Как получить услугу?
+					+e.desc.p
+						| для жителей 
+						a(href="#") Московской области
+				+e.nav.js-work-nav.owl-nav
+			+e.list.flex._justify.js-wrapSlider(data-settings='{"smartSpeed": 500, "nav": true, "loop": false, "autoWidth":true, "margin": 10, "navContainer": ".js-work-nav"}')
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img6.svg")
+						+e.number 1
+					+e.text.p
+						| Проверьте возможность развода
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img2.svg")
+						+e.number 2
+					+e.text.p
+						| Заполните онлайн бланк с вопросами
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img4.svg")
+						+e.number 3
+					+e.text.p
+						| Отправьте почтой  документы в суд
+				+e.item
+					+e.circle.css-medium-bg
+						+e.IMG.icon(src="/app/img/work__img5.svg")
+						+e.number 4
+					+e.text.p
+						| Получаете 
+						br
+						| решение суда
+	+b.service-form.css-light-bg
+		+e.wrap.wrap
+			+e.H2.title.h2 Проверьте возможность развода
+			+e.desc.p в соответствии с законодательством Российской Федерации:
+			+e.row.flex
+				+e.column
+					+e.box
+						+e.H3.box-title.h3 Выберите ваш пол:
+						+e.list
+							+e.item.flex._vertical
+								+e.LABEL.radio.radio__
+									+e.INPUT.input(type="radio", name="gender")
+									+e.icon
+									+e.text Мужской
+								+e.LABEL.radio.radio__
+									+e.INPUT.input(type="radio", name="gender")
+									+e.icon
+									+e.text Женский
+					+e.box
+						+e.H3.box-title.h3 Выберите пункты, описывающие вашу ситуацию:
+						+e.list
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text Супруга признана безвестно отсутствующей
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text Супруга признана судом недееспособной
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text Супруга осуждена и отбывает наказание за преступление сроком свыше трех лет
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text Супруга беременна
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text В браке есть дети возрастом до одного года
+							+e.item.flex._vertical
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text
+										strong Ничего из перечисленного выше
+					+e.box
+						+e.H3.box-title.h3 В браке есть дети до 18 лет? 
+						+e.list
+							+e.item.flex._vertical
+								+e.LABEL.radio.radio__
+									+e.INPUT.input(type="radio", name="child")
+									+e.icon
+									+e.text Да
+								+e.LABEL.radio.radio__
+									+e.INPUT.input(type="radio", name="child")
+									+e.icon
+									+e.text Нет
+				+e.column
+					+e.FORM.box(action="/app/mail")
+						+e.H3.box-title.h3 Контактные данные
+						+e.list._fields
+							+e.item
+								+e.field.field__._phone
+									+e.INPUT.input(name="phone", type="tel", placeholder="Введите телефон")
+									+e.icon._phone
+										+icon('phone')
+								+e.success.css-color-green.p.js-sucsess Номер подтвержден
+							+e.item._hidden.js-sms
+								+e.item-text Минутку, код подтверждения отправлен на указанный номер
+								+e.field.field__._phone
+									+e.INPUT.input(name="sms", type="text", placeholder="Введите код из смс")
+							+e.item
+								+button(class='_middle _white js-confirm-number', type="button") Подтвердить Номер
+							+e.item
+								+e.LABEL.radio.checkbox__
+									+e.INPUT.input(type="checkbox", name="")
+									+e.icon
+									+e.text
+										| Я принимаю условия  
+										a(href="#") лицензионного соглашения  
+										| и 
+										a(href="#") правила
+							+e.item
+								+button(class='_middle _blue js-toggle-sesult', type="button") Проверить 
+									+e.SPAN.hide-text возможность развода
+								+e.form-text.p.css-color-gray Форма №0000392
+					+e.box._result.js-result-box
+						+e.H3.box-title.h3 Результат проверки:
+						+e.content.content
+							p
+								| В соответствии с законодательством РФ
+								br
+								strong.css-color-green вы имеете право на расторжение брака.
+							p
+								span.css-color-blue Заполните форму заявления 
+								| для подготовки документов в суд.
+							ul
+								li Готовое заявление в суд можно будет отправить почтой.
+								li На заседание можно не приходить.
+								li Вы получите развод дистанционно.
+						+btn(class="_green _middle", href="quiz.html") Составить иск в суд
+	include ../layouts/faq

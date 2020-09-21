@@ -1,0 +1,40 @@
+.checkbox {
+	display: flex;
+	font-size: 16px;
+	cursor: pointer;
+	&__input {
+		display: none;
+		&:checked + .checkbox__icon {
+			&:before {
+				opacity: 1;
+			}
+		}
+		&:checked + .checkbox__icon + .checkbox__text {
+			color: $blue;
+		}
+	}
+	&__icon {
+		width: 20px;
+		min-width: 20px;
+		height: 20px;
+		background: #fff;
+		border: 1px solid $blue;
+		border-radius: 4px;
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			content: '';
+			display: block;
+			width: 16px;
+			height: 11px;
+			background: url(/img/check.svg)  0 no-repeat;
+			transition: ease .2s;
+			opacity: 0;
+		}
+	}
+	&__text {
+		transition: ease .2s;
+	}
+}
