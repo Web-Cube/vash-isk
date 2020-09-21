@@ -1,0 +1,96 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Раздел поддержки';
+
+block content
+	include ../layouts/header_blue
+	+b.preview-section._gray
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+b.support
+				+e.H1.title.h1 Раздел поддержки
+				+e.desc.p Если у Вас появятся вопросы, просто напишите нам. Время обработки Ваших обращений — один рабочий день.
+				+e.FORM.form.flex
+					+e.column
+						+e.box
+							+e.H3.box-title.h3 Выберите услугу 
+								span.css-color-red *
+							+e.list
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="service" checked)
+										+e.icon
+										+e.text Расторжение брака
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="service")
+										+e.icon
+										+e.text Взыскание алиментов на ребенка
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="service")
+										+e.icon
+										+e.text Защита прав потребителей
+						+e.box
+							+e.H3.box-title.h3 Выберите тему вашего обращения
+								span.css-color-red *
+							+e.list
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="subj" checked)
+										+e.icon
+										+e.text Вопрос по составлению иска
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="subj")
+										+e.icon
+										+e.text Вопрос по сбору документов
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="subj")
+										+e.icon
+										+e.text Вопрос по стоимости и/или оплате
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="subj")
+										+e.icon
+										+e.text Вопрос о детях и/или имуществе
+								+e.item
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="subj")
+										+e.icon
+										+e.text Другое
+					+e.column
+						+e.box._gray
+							+e.field.field__
+								+e.LABEL.label.h3 Введите номер заказа, если он есть
+								+e.INPUT.input(name="number", type="text", placeholder="100 500 518")
+							+e.field.field__
+								+e.LABEL.label.h3 Введите вашу электронную почту
+								+e.INPUT.input(name="email", type="text", placeholder="service.google@gmail.com")
+								+e.icon-email
+									+icon('email')
+							+e.field.field__
+								+e.LABEL.label.h3 Напишите подробно ваш вопрос 
+									span.css-color-red *
+								+e.TEXTAREA.input._textarea(name="mess", placeholder="Ваш вопрос … ")
+							+e.field.field__
+								+e.LABEL.label.h3 Прикрепите файл
+								+e.file.file__
+									+e.INPUT.input(type="file", name="file")
+									+e.btn.btn__._white._middle
+										+e.icon
+											+icon('file')
+										+e.text Прикрепить файл
+								+e.file-text
+									| Не больше 5 файлов 
+									br
+									| Максимальный размер 5 MB 
+									br
+									| Форматы: txt rtf pdf doc docx odt ppt pptx odp xls xlsx ods jpg png jpeg
+							+button(class="_blue _middle") Отправить обращение
+							+e.bottom
+								+e.bottom-title.p Форма №0000392
+								+e.bottom-text
+									| Информация о персональных данных граждан, направивших запрос в электронном виде, хранится и обрабатывается с соблюдением требований российского законодательства о персональных данных.

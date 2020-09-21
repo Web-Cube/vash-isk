@@ -7,6 +7,10 @@
 		width: 679rem;
 	}
 	
+	&_gray {
+		background: #F0F4F8;
+	}
+	
 	@include max-screen($large_tablet) {
 		&__gerb {
 			width: 295px;

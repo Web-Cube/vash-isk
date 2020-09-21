@@ -45,6 +45,13 @@
 		color: $blue;
 	}
 	
+	.icon-file {
+		width: 11px;
+		height: 20px;
+		fill: $blue;
+		margin-right: 12px;
+	}
+	
 	@include max-screen($large_tablet) {
 		
 		&_big {

@@ -17,6 +17,18 @@
 		&:focus {
 			border: 0;
 			border-bottom: 2px solid $blue;
+			& + .field__icon_phone {
+				fill: $blue;
+			}
+			& + .field__icon-email {
+				fill: $blue;
+			}
+		}
+		&_textarea {
+			height: 170px;
+			overflow: hidden;
+			resize: none;
+			padding-top: 15px;
 		}
 	}
 	&__icon {
@@ -28,6 +40,49 @@
 			width: 24px;
 			fill: #AAC8E6;
 			transform: translateY(-50%);
+		}
+	}
+	&__label {
+		margin-bottom: 10px;
+		display: block;
+	}
+	
+	&__icon-email {
+		position: absolute;
+		pointer-events: none;
+		right: 15px;
+		bottom: 15px;
+		width: 24px;
+		fill: #AAC8E6;
+	}
+	&__file-text {
+		font-size: 12px;
+		line-height: 15px;
+		margin-left: 10px;
+		margin-top: 20px;
+		color: #90A1AE;
+	}
+}
+
+.file {
+	position: relative;
+	cursor: pointer;
+	&__btn {
+		width: 270px;
+	}
+	&__input {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 5;
+		cursor: pointer;
+	}
+	@include max-screen($small_tablet) {
+		&__btn {
+			width: 100%;
 		}
 	}
 }
