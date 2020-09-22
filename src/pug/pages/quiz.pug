@@ -1,0 +1,285 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Квиз';
+
+block content
+	+b.quiz
+		+e.header
+			+e.header-wrap.wrap.flex._justify
+				+e.A.header-logo(href="#")
+					img(src="/app/img/logo.svg")
+				+e.header-text Форма № АА-478, заявление № 101334
+		+e.body
+			+e.body-wrap.wrap
+				include ../layouts/gerb
+				+e.top
+					+e.top-list.flex
+						+e.top-item.is-active
+							| Ваши&nbsp;данные
+							+e.top-arrow
+								+icon('arrowRight')
+						+e.top-item
+							| Данные&nbsp;о&nbsp;супруге
+							+e.top-arrow
+								+icon('arrowRight')
+						+e.top-item
+							| О&nbsp;браке
+							+e.top-arrow
+								+icon('arrowRight')
+						+e.top-item
+							| О&nbsp;детях
+							+e.top-arrow
+								+icon('arrowRight')
+						+e.top-item
+							| Оплата
+							+e.top-arrow
+								+icon('arrowRight')
+						+e.top-item
+							| Получение&nbsp;документов
+					+e.line
+						+e.scale(style="width: 16.66%")
+				+e.form
+					+e.step.is-active
+						+e.H2.step-title.h2 1. У вас есть спор об имуществе?
+						+e.row.flex
+							+e.column._left
+								+e.box
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step1" checked)
+										+e.icon
+										+e.text Да
+									+e.LABEL.radio.radio__
+											+e.INPUT.input(type="radio", name="step1")
+											+e.icon
+											+e.text Нет
+								+e.bottom
+									+e.A.btn._back.btn__._white._middle(href="/service.html")
+										+e.icon
+											+icon('arrowLeft')
+										+e.text Назад
+									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+										+e.text Далее
+										+e.icon
+											+icon('arrowRight')
+							+e.column._right
+								img(src="/img/sertificate.png")
+					+e.step
+						+e.H2.step-title.h2 2. У вас есть спор об имуществе?
+						+e.row.flex
+							+e.column._left
+								+e.box
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step2" checked)
+										+e.icon
+										+e.text Да
+									+e.LABEL.radio.radio__
+											+e.INPUT.input(type="radio", name="step2")
+											+e.icon
+											+e.text Нет
+								+e.bottom
+									+e.A.btn._back.btn__._white._middle.js-prev-step(href="#")
+										+e.icon
+											+icon('arrowLeft')
+										+e.text Назад
+									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+										+e.text Далее
+										+e.icon
+											+icon('arrowRight')
+							+e.column._right._hide
+								img(src="/img/sertificate.png")
+					+e.step
+						+e.H2.step-title.h2 3. Серия свидетельства о браке
+						+e.row.flex
+							+e.column._left
+								+e.box
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step3" checked)
+										+e.icon
+										+e.text Утрата любви и уважения к супругу
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step3")
+										+e.icon
+										+e.text Появление чувства неприязни друг к другу
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step3")
+										+e.icon
+										+e.text Намеренная безработица мужа или жены без согласования со второй половиной
+									+e.LABEL.radio.radio__
+										+e.INPUT.input(type="radio", name="step3")
+										+e.icon
+										+e.text Отсутствие жилья при совместном проживании с родителями
+								+e.bottom
+									+e.A.btn._back.btn__._white._middle.js-prev-step(href="#")
+										+e.icon
+											+icon('arrowLeft')
+										+e.text Назад
+									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+										+e.text Далее
+										+e.icon
+											+icon('arrowRight')
+							+e.column._right._hide
+								img(src="/img/sertificate.png")
+					+e.step
+						+e.H2.step-title.h2 4. Данные свидетельства о браке
+						+e.row.flex
+							+e.column._left
+								+e.box._gray
+									+e.field.field__
+										+e.INPUT.input(name="series", type="text", placeholder="Серия и номер")
+										+e.icon-user
+											+icon('user')
+									+e.field.field__
+										+e.INPUT.input(name="date", type="text", placeholder="Дата выдачи")
+								+e.bottom
+									+e.A.btn._back.btn__._white._middle.js-prev-step(href="#")
+										+e.icon
+											+icon('arrowLeft')
+										+e.text Назад
+									+e.A.btn._back.btn__._blue._middle.js-step-status(href="#")
+										+e.text Далее
+										+e.icon
+											+icon('arrowRight')
+							+e.column._right
+								img(src="/img/sertificate.png")
+					+e.step._status
+						+b.status-list
+							+e.item.is-wait
+								+e.box._wait
+									+e.icon
+										img(src="/app/img/waiting.svg")
+									+e.text
+										| Определение подсудности
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Подсудность определена
+							+e.item
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Индивидуальноый пакет документов сформирован
+								+e.box._wait
+									+e.icon
+										img(src="/app/img/waiting.svg")
+									+e.text
+										| Сбор индивидуального пакета документов
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Сбор индивидуального пакета документов
+							+e.item
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Исковое заявление сформировано
+								+e.box._wait
+									+e.icon
+										img(src="/app/img/waiting.svg")
+									+e.text
+										| Формирование искового заявления
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Формирование искового заявления
+							+e.item
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Инструкция готова
+								+e.box._wait
+									+e.icon
+										img(src="/app/img/waiting.svg")
+									+e.text
+										| Формирование инструкции
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Формирование инструкции
+							+e.item._form
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Почта vladimir.a.grosul@gmail.com подтверждена
+								+e.box-form.js-wait
+									+e.box._wait
+										+e.icon
+											img(src="/app/img/process.svg")
+										+e.text
+											| Подтверждение адресе эл. почты
+									+e.FORM.form(action="#")
+										+e.H3.form-title.h3 Email
+										+e.form-field.field__
+											+e.INPUT.input(name="email", type="text", placeholder="service.google@gmail.com")
+											+e.icon-email
+												+icon('email')
+											+e.help
+												+e.help-title.p
+													strong Зачем указывать почту?
+												+e.help-text.p
+													| На эту эл. почту будут отправлены иск, инструкция и пакет документов.
+										+e.LABEL.form-checkbox.checkbox__
+											+e.INPUT.input(type="checkbox", name="")
+											+e.icon
+											+e.text
+												| Я принимаю условия  
+												a(href="#") лицензионного соглашения  
+												| и 
+												a(href="#") правила
+										+e.BUTTON.form-btn.btn__._blue._middle.js-to-pay(type="button")
+											+e.text Подтвердить
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Подтверждение адресе эл. почты
+							+e.item._form
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Услуга оплачена клиентом
+								+e.box-form.js-wait
+									+e.box._wait
+										+e.icon
+											img(src="/app/img/process.svg")
+										+e.text
+											| Ожидание оплаты клиентом
+									+e.pay
+										+e.A.pay-btn.btn__._blue._middle.js-to-docs(href="#")
+											+e.text Оплатить 2 390 р.
+										+e.pay-content
+											+e.pay-identifier.p
+												| Идентификатор услуги: АА-478
+											+e.pay-text
+												| Документы в суд можно будет отправить почтой (инструкцию мы предоставим), на заседание можно не ходить — Вы получите развод дистанционно.
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Ожидание оплаты клиентом
+							+e.item._form
+								+e.box._sucsess
+									+e.icon
+										img(src="/app/img/ok.svg")
+									+e.text
+										| Документы успешно отправлены
+								+e.box-form.js-wait
+									+e.box._wait
+										+e.icon
+											img(src="/app/img/waiting.svg")
+										+e.text
+											| Отправка документов на почту
+									+e.docs
+										p
+											| В течение 5 минут на указанную вами почту придет готовое исковое заявление в суд на развод и все сопутствующие документы. 
+										p
+											| Документы в суд можно будет отправить почтой (инструкцию мы предоставим), на заседание можно не ходить — Вы получите развод дистанционно.
+								+e.box._hide
+									+e.icon._hide
+									+e.text
+										| Оказание услуги и отправка документов на почту
+					

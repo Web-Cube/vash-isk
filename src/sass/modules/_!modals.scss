@@ -1,5 +1,5 @@
 .mfp-container{
-	padding: 0 15px;
+	padding: 0 10px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
@@ -22,6 +22,102 @@
 .modals{
 	margin: auto;
 	position: relative;
+	border-radius: 10px;
+	&_location {
+		background: #F0F4F8;
+		width: 100%;
+		max-width: 640rem;
+		.modals__close {
+			right: 40px;
+			top: 40px;
+		}
+	}
+	&__close {
+		width: 40px;
+		height: 40px;
+		background: #D2E5F9;
+		border-radius: 100%;
+		position: absolute;
+		cursor: pointer;
+		padding: 12px;
+		stroke: #0061AE;
+		stroke-width: 1;
+	}
+	@include max-screen($large_mobile) {
+		&_location {
+			max-width: 340px;
+			.modals__close {
+				right: 20px;
+				top: 20px;
+			}
+		}
+	}
+}
+
+.location {
+	padding: 40px;
+	&__desc {
+		margin-top: 20px;
+		max-width: 500px;
+	}
+	&__field {
+		margin-top: 40px;
+	}
+	&__box {
+		margin-top: 40px;
+		&-title {
+			margin-bottom: 20px;
+		}
+	}
+	&__row {
+		.location__radio {
+			&:not(:last-child) {
+				margin-right: 60rem;
+			}
+		}
+	}
+	&__btn {
+		margin-top: 40px;
+		width: 180px;
+	}
+	&__field {
+		max-width: 475px;
+		display: none;
+		margin-top: 30px;
+	}
+	@include max-screen($large_mobile) {
+		padding: 20px;
+		&__row {
+			display: block;
+		}
+		&__radio {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		&__field {
+			margin-top: 20px;
+		}
+		&__btn {
+			width: 100%;
+		}
+		&__title {
+			font-size: 24px;
+			line-height: 100%;
+			max-width: 250px;
+		}
+		&__desc {
+			margin-top: 10px;
+			max-width: 240px;
+		}
+		&__row {
+			.location__radio {
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
 }
 
 .css-modal-animate{

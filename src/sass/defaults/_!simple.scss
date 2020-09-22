@@ -35,7 +35,7 @@ html,
 body {
 	font-size: 1px; // 1rem = 1px
 
-	@include max-screen($large_tablet) {
+	@include max-screen(1200px) {
 		font-size: .87px;
 	}
 	@include max-screen(359px) {

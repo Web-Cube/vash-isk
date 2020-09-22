@@ -14,6 +14,9 @@
 	&_blue {
 		background: $blue;
 		color: #fff;
+		.icon-arrowLeft, .icon-arrowRight {
+			stroke: #fff;
+		}
 	}
 	&_big {
 		height: 79rem;
@@ -23,7 +26,7 @@
 	}
 	
 	&_middle {
-		height: 57rem;
+		height: 57px;
 		font-size: 14px;
 		letter-spacing: 0.1em;
 		border-radius: 5px;
@@ -33,6 +36,9 @@
 		background: #fff;
 		color: $blue;
 		filter: drop-shadow(0px 10px 10px rgba(199, 215, 226, 0.25));
+		.icon-arrowLeft, .icon-arrowRight {
+			stroke: $blue;
+		}
 	}
 	
 	&_green {
@@ -50,6 +56,26 @@
 		height: 20px;
 		fill: $blue;
 		margin-right: 12px;
+	}
+	
+	.icon-arrowLeft {
+		width: 7px;
+		min-width: 7px;
+		height: 14px;
+		fill: none;
+		stroke-width: 3;
+		margin-right: 13px;
+		transform: translateY(1px);
+	}
+	
+	.icon-arrowRight {
+		width: 7px;
+		min-width: 7px;
+		height: 14px;
+		fill: none;
+		stroke-width: 3;
+		margin-left: 13px;
+		transform: translateY(1px);
 	}
 	
 	@include max-screen($large_tablet) {

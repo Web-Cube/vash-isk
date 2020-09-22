@@ -25,6 +25,7 @@
 }
 
 .gerb {
+	pointer-events: none;
 	&.is-animate {
 		opacity: 0;
 		transition: ease 1s;

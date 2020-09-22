@@ -1,0 +1,25 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Правовая информация';
+
+block content
+	include ../layouts/header_blue
+	+b.preview-section._gray
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+b.page
+				+e.H1.title.h1.css-color-black Правовая информация
+				+e.info
+					+e.info-item
+						+e.A.info-link(href='#')
+							+e.info-icon
+								+icon('docs')
+							+e.info-text
+								| Лицензионное соглашение (PDF, 2 MB)
+					+e.info-item
+						+e.A.info-link(href='#')
+							+e.info-icon
+								+icon('docs')
+							+e.info-text
+								| Политика конфиденциальности (PDF, 12 MB)

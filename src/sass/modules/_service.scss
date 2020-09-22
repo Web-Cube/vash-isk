@@ -192,6 +192,10 @@
 					background: $blue;
 				}
 			}
+			&.is-hidden {
+				opacity: .5;
+				transition: ease .3s;
+			}
 		}
 		&__list {
 			margin-top: 30px;

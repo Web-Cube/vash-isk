@@ -4,15 +4,32 @@ import { config } from "../config";
 
 var forms = {
 	mask: () => {
-		var selector = document.querySelectorAll("input[name='phone']");
+		var phone = document.querySelectorAll("input[name='phone']");
+		var series = document.querySelectorAll("input[name='series']");
+		var date = document.querySelectorAll("input[name='date']");
 
 		var im = new Inputmask({
 			mask: "+7 (999) 999-99-99",
 			clearMaskOnLostFocus: true,
 			clearIncomplete: true,
 		});
+		
+		var seriesMask = new Inputmask({
+			mask: "99 999999",
+			clearMaskOnLostFocus: true,
+			clearIncomplete: true,
+		});
+		
+		var dateMask = new Inputmask({
+			mask: "99.99.9999",
+			clearMaskOnLostFocus: true,
+			clearIncomplete: true,
+		});
 
-		im.mask(selector);
+		im.mask(phone);
+		
+		seriesMask.mask(series);
+		dateMask.mask(date);
 	},
 
 	validate: () => {

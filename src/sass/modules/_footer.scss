@@ -1,6 +1,9 @@
 .footer {
 	padding: 30px 0;
 	border-top: 1px solid #AAC8E6;
+	position: relative;
+	z-index: 20;
+	background: #fff;
 	&__desc {
 		font-size: 12px;
 		line-height: 15px;

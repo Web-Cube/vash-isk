@@ -1,0 +1,18 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Страница редиректа';
+
+block content
+	meta(http-equiv='refresh', content='3;URL=https://www.kp.ru/guide/iskovoe-zajavlenie-v-sud.html')
+	include ../layouts/header_blue
+	+b.preview-section._gray
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+b.page
+				+e.H1.title.h1.css-color-black Идет перенаправление 
+					br
+					| на Портал государственных услуг
+				+e.loader
+					img(src="/img/loader.png")
+				+e.A.before-heading.before-heading.css-color-blue(href="/main.html") Отменить

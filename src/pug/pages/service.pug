@@ -20,7 +20,7 @@ block content
 						+btn(href="#form", class="_blue _big js-scroll-to") Составить иск
 						+btn(href="#form", class="_white _big js-scroll-to") Проверить возможность развода
 					+e.row.flex
-						+e.box
+						+e.box.js-animateme.is-animate._up(data-animate-class="show")
 							+e.box-title.before-heading.css-color-blue Стоимость:
 							+e.box-head
 								+e.box-logo
@@ -31,7 +31,7 @@ block content
 							+e.box-text.p
 								strong 2 390 
 								| руб.
-						+e.box
+						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="300")
 							+e.box-title.before-heading.css-color-blue Срок выполнения услуги:
 							+e.box-head
 								+e.box-logo
@@ -41,7 +41,7 @@ block content
 								+e.box-strip(style="width: 12%")
 							+e.box-text.p
 								strong 10 — 20 минут
-						+e.box
+						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="600")
 							+e.box-head
 								+e.box-icon
 								+e.box-name.p Через адвоката
@@ -52,7 +52,7 @@ block content
 								| руб. в среднем по
 								br
 								a(href="#") Московской области
-						+e.box
+						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="900")
 							+e.box-head
 								+e.box-icon
 								+e.box-name.p Через адвоката
@@ -162,7 +162,7 @@ block content
 									+e.icon
 									+e.text Нет
 				+e.column
-					+e.FORM.box(action="/app/mail")
+					+e.FORM.box.is-hidden.js-show-form(action="/app/mail")
 						+e.H3.box-title.h3 Контактные данные
 						+e.list._fields
 							+e.item

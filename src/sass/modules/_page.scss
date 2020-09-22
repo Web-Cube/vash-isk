@@ -1,0 +1,71 @@
+.page {
+	padding: 130rem 0;
+	position: relative;
+	z-index: 2;
+	&__desc {
+		margin-top: 20px;
+	}
+	&__list {
+		margin-top: 120rem;
+	}
+	&__item {
+		width: 33.33%;
+		&-info {
+			margin-top: 40rem;
+			a {
+				color: $default;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	&__info {
+		margin-top: 120rem;
+		&-item {
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			align-items: center;
+			color: $blue;
+			font-size: 16px;
+			line-height: 19px;
+		}
+		&-icon {
+			width: 24px;
+			min-width: 24px;
+			margin-right: 10px;
+			fill: $blue;
+		}
+	}
+	
+	&__loader {
+		margin-top: 60rem;
+		margin-bottom: 60rem;
+	}
+	
+	@include max-screen($large_tablet) {
+		padding: 60px 0;
+		&__list {
+			margin-top: 0;
+			padding-top: 30px;
+		}
+		&__item {
+			width: 100%;
+			margin-top: 30px;
+			&-info {
+				margin-top: 10px;
+			}
+		}
+		&__info {
+			margin-top: 60px;
+		}
+		&__loader {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+	}
+	
+}

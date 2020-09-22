@@ -1,0 +1,28 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Контакты';
+
+block content
+	include ../layouts/header_blue
+	+b.preview-section._gray
+		+e.wrap.wrap
+			include ../layouts/gerb
+			+b.page
+				+e.H1.title.h1.css-color-black Контакты
+				+e.desc.p Если у Вас появятся вопросы, просто напишите нам. 
+					br
+					| Время обработки Ваших обращений — один рабочий день.
+				+e.list.flex
+					+e.item
+						+e.item-title.before-heading.css-color-blue Для клиентов:
+						+e.item-info.h2
+							a(href="mailto:info@vash-isk.ru") info@vash-isk.ru
+					+e.item
+						+e.item-title.before-heading.css-color-blue Для адвокатов и судов:
+						+e.item-info.h2
+							a(href="mailto:legal@vash-isk.ru") legal@vash-isk.ru
+					+e.item
+						+e.item-title.before-heading.css-color-blue Для инвесторов и партнеров:
+						+e.item-info.h2
+							a(href="mailto:invest@vash-isk.ru") invest@vash-isk.ru
