@@ -20,44 +20,44 @@ block content
 						+btn(href="#form", class="_blue _big js-scroll-to") Составить иск
 						+btn(href="#form", class="_white _big js-scroll-to") Проверить возможность развода
 					+e.row.flex
-						+e.box.js-animateme.is-animate._up(data-animate-class="show")
+						+e.box
 							+e.box-title.before-heading.css-color-blue Стоимость:
 							+e.box-head
 								+e.box-logo
 									img(src="/app/img/logo.svg")
 								+e.box-name.h3 ВАШ-ИСК.РФ
 							+e.box-scale
-								+e.box-strip(style="width: 27%")
+								+e.box-strip.js-animateme.is-animate(data-animate-class="show",animate-offset="200",style="width: 27%")
 							+e.box-text.p
 								strong 2 390 
 								| руб.
-						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="300")
+						+e.box
 							+e.box-title.before-heading.css-color-blue Срок выполнения услуги:
 							+e.box-head
 								+e.box-logo
 									img(src="/app/img/logo.svg")
 								+e.box-name.h3 ВАШ-ИСК.РФ
 							+e.box-scale
-								+e.box-strip(style="width: 12%")
+								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="400",animate-offset="200",style="width: 18%")
 							+e.box-text.p
 								strong 10 — 20 минут
-						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="600")
+						+e.box
 							+e.box-head
 								+e.box-icon
 								+e.box-name.p Через адвоката
 							+e.box-scale
-								+e.box-strip(style="width: 12%")
+								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="800",animate-offset="200",style="width: 50%")
 							+e.box-text.p
 								strong 5 734 
 								| руб. в среднем по
 								br
 								a(href="#") Московской области
-						+e.box.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="900")
+						+e.box
 							+e.box-head
 								+e.box-icon
 								+e.box-name.p Через адвоката
 							+e.box-scale
-								+e.box-strip(style="width: 12%")
+								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="1200",animate-offset="200",style="width: 35%")
 							+e.box-text.p
 								| от 5-ти рабочих
 								strong дней
@@ -97,7 +97,7 @@ block content
 						| Получаете 
 						br
 						| решение суда
-	+b.service-form.css-light-bg
+	+b.service-form.css-light-bg#form
 		+e.wrap.wrap
 			+e.H2.title.h2 Проверьте возможность развода
 			+e.desc.p в соответствии с законодательством Российской Федерации:

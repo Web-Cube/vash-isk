@@ -11,6 +11,7 @@
 		border-bottom: 1px solid #979797;
 		a {
 			text-decoration: underline;
+			color: inherit;
 		}
 	}
 	
@@ -45,6 +46,8 @@
 			}
 			a {
 				transition: ease .2s;
+				color: #080808;
+				text-decoration: none;
 				&:hover {
 					color: $blue;
 				}

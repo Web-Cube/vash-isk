@@ -24,7 +24,9 @@ var defaults = {
 			
 		});
 		
+		
 		$(window).scroll(function(){
+			
 			let viewport_height = $(window).height();
 			let viewport_width = $(window).width();
 			let scroll_top = $(window).scrollTop();
@@ -43,6 +45,22 @@ var defaults = {
 					}
 				} else {
 					$(this).attr("style","transform: translateY(" + (scroll_top - paralax_pos )/paralax_step + "px)" );
+				}
+			});
+			
+			$(".js-scroll-animateme").each(function(){
+				var viewport_height = $(window).height();
+    			var scroll_top = $(window).scrollTop();
+				
+				var animate_pos = $(this).offset().top;
+				var animate_offset = $(this).data("animate-offset");
+				var animate_delay = $(this).data("animate-delay");
+				var animate = $(this).data("animate-class");
+				var win_scroll = scroll_top + viewport_height - animate_offset;
+				$(this).css("transition-delay",animate_delay+"ms");
+				
+				if ( $(window).scrollTop() >= 100 ) {
+					$(this).addClass(animate);
 				}
 			});
 
@@ -122,11 +140,15 @@ var defaults = {
 			
 			$('.quiz__scale').css('width', resultWidth);
 			
+			return false;
+			
 		});
 		
 		$('.js-prev-step').click(function(){
 			
 			$('.quiz__step.is-active').hide().removeClass('is-active').prev().addClass('is-active').fadeIn(500);
+			
+			return false;
 			
 		});
 		

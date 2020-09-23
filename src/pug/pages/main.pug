@@ -14,14 +14,17 @@ block content
 					br
 					| заявления для подачи в суд
 				+e.list.flex
-					+e.A.list-item.js-animateme.is-animate._up(href="/service.html",data-animate-class="show")
-						+e.list-title.h3 Расторжение брака
-					+e.A.list-item.js-animateme.is-animate._up(href="#",data-animate-class="show",data-animate-delay="300")
-						+e.list-title.h3 Взыскание алиментов на ребенка
-						+e.list-desc.small.css-color-gray В разработке
-					+e.A.list-item.js-animateme.is-animate._up(href="#",data-animate-class="show",data-animate-delay="500")
-						+e.list-title.h3 Защита прав потребителей
-						+e.list-desc.small.css-color-gray В разработке
+					+e.list-column.js-animateme.is-animate._up(data-animate-class="show")
+						+e.A.list-item(href='/service.html')
+							+e.list-title.h3 Расторжение брака
+					+e.list-column.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="300")
+						+e.A.list-item(href='/service.html')
+							+e.list-title.h3 Взыскание алиментов на ребенка
+							+e.list-desc.small.css-color-gray В разработке
+					+e.list-column.js-animateme.is-animate._up(data-animate-class="show",data-animate-delay="500")
+						+e.A.list-item(href='/service.html')
+							+e.list-title.h3 Защита прав потребителей
+							+e.list-desc.small.css-color-gray В разработке
 	+b.work
 		+e.wrap.wrap
 			+e.head.flex._vertical._justify
