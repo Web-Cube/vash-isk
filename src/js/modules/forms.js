@@ -86,11 +86,35 @@ var forms = {
 				if ($input.val() == "") $input.parent().removeClass("is-focus");
 			});
 	},
+	
+	label: () => {
+		
+		$('.field__input').each(function(){
+			let placeholder = $(this).attr('placeholder');
+			$(this).parent().append('<label class="field__mask">' +placeholder+ '</label>');
+			$(this).attr('placeholder','');
+			if ( $(this).val().length > 1 ) {
+				$(this).closest('.field').find('.field__mask').addClass('is-focus');
+			}
+		}).blur(function(){
+			if ( $(this).val().length > 1 ) {
+				$(this).parent().find('.field__mask').addClass('is-focus');
+			} else {
+				$(this).parent().find('.field__mask').removeClass('is-focus');
+			}
+		});
+		
+		$('.field__mask').click(function(){
+			$(this).parent().find('.field__input').focus();
+		});
+		
+	},
 
 	init: () => {
 		forms.mask();
 		forms.validate();
 		forms.events();
+		forms.label();
 	},
 };
 

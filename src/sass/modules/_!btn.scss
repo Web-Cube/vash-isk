@@ -78,6 +78,17 @@
 		transform: translateY(1px);
 	}
 	
+	&.is-hidden {
+		opacity: 0;
+		visibility:hidden; 
+	}
+	
+	&.is-disabled {
+		.icon-arrowRight {
+			stroke: $blue;
+		}
+	}
+	
 	@include max-screen($large_tablet) {
 		
 		&_big {

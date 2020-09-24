@@ -1,27 +1,52 @@
-+b.modals._location.mfp-hide#location
-	+e.location.location__
-		+e.H2.title.h2 Ваше местоположение
-		+e.desc.p
-			| От выбора местоположения зависит набор услуг, доступный для получения на портале.
-		+e.box
-			+e.H3.box-title.h3 Выберите страну:
-			+e.LABEL.radio.radio__
-				+e.INPUT.input.js-state(type="radio", name="state")
++b.modals._form.mfp-hide#form1
+	+b.login-form
+		+e.title Для адвокатов
+		+e.fields
+			+e.field.field__
+				+e.INPUT.input(name="login", type="text", placeholder="Введите email")
+				+e.icon-user
+					+icon('user')
+			+e.field.field__
+				+e.INPUT.input(name="login", type="password", placeholder="Введите пароль")
+				+e.icon-lock
+					+icon('lock')
+		+e.bottom.flex._right
+			+e.BUTTON.btn._back.btn__._blue._middle(type="submit")
+				+e.text Войти
 				+e.icon
-				+e.text Российская Федерация
-		+e.box
-			+e.H3.box-title.h3 Выбрать регион:
-			+e.row.flex
-				+e.LABEL.radio.radio__
-					+e.INPUT.input.js-auto(type="radio", name="city")
-					+e.icon
-					+e.text Определить автоматически
-				+e.LABEL.radio.radio__
-					+e.INPUT.input.js-city(type="radio", name="city")
-					+e.icon
-					+e.text Выбрать вручную
-		+e.field.field__
-			+e.INPUT.input(name="city", type="text", placeholder="Название населенного пункта")
-			+e.icon-location
-				+icon('location')
-		+btn(class="_blue _middle is-disabled") Сохранить
+					+icon('arrowRight')
++b.modals._form.mfp-hide#form2
+	+b.login-form
+		+e.title Для адвокатов
+		+e.fields
+			+e.field.field__.is-error
+				+e.INPUT.input(name="login", type="text", placeholder="Введите email", value="service.google@gmail.com")
+				+e.icon-user
+					+icon('user')
+			+e.field.field__.is-error
+				+e.INPUT.input(name="login", type="password", placeholder="Введите email", value="sdcvds")
+				+e.icon-lock
+					+icon('lock')
+		+e.error.css-color-red Неверный логин или пароль
+		+e.bottom.flex._right
+			+e.BUTTON.btn._back.btn__._blue._middle.is-disabled(type="submit")
+				+e.text Войти
+				+e.icon
+					+icon('arrowRight')
++b.modals._form.mfp-hide#form3
+	+b.login-form
+		+e.title Для судей
+		+e.fields
+			+e.field.field__
+				+e.INPUT.input(name="login", type="text", placeholder="Введите email")
+				+e.icon-user
+					+icon('user')
+			+e.field.field__
+				+e.INPUT.input(name="login", type="password", placeholder="Введите пароль")
+				+e.icon-lock
+					+icon('lock')
+		+e.bottom.flex._right
+			+e.BUTTON.btn._back.btn__._blue._middle(type="submit")
+				+e.text Войти
+				+e.icon
+					+icon('arrowRight')

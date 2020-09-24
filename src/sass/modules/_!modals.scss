@@ -5,7 +5,14 @@
 }
 .mfp-bg{
 	background-color: rgba(0, 0, 0, 0.302);
-	opacity: 1;
+	opacity: 0;
+	transition: ease .7s;
+	&.mfp-ready {
+		opacity: 1;
+	}
+	&.mfp-removing {
+		opacity: 0;
+	}
 }
 .mfp-counter{
 	display: none;
@@ -13,6 +20,7 @@
 
 .mfp-image-holder {
 	background-color: rgba(0, 0, 0, 0.702);
+	transition: ease .5s;
 }
 
 .mfp-content{
@@ -23,6 +31,15 @@
 	margin: auto;
 	position: relative;
 	border-radius: 10px;
+	&_form {
+		background: #E4F0FC;
+		max-width: 500px;
+		padding: 20px;
+		.modals__close {
+			right: 20px;
+			top: 20px;
+		}
+	}
 	&_location {
 		background: #F0F4F8;
 		width: 100%;
@@ -120,10 +137,46 @@
 	}
 }
 
+.login-form {
+	background: #E4F0FC;
+	&__title {
+		font-size: 24px;
+		line-height: 40px;
+		letter-spacing: -0.03em;
+		font-weight: bold;
+		margin-bottom: 40rem;
+	}
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	&__bottom {
+		margin-top: 40rem;
+	}
+	&__btn {
+		width: 180px;
+	}
+	
+	&__error {
+		font-size: 14px;
+		line-height: 17px;
+		margin-top: 20px;
+	}
+	
+	@include max-screen($large_mobile) {
+		&__btn {
+			width: 100%;
+		}
+	}
+}
+
 .css-modal-animate{
 	// start state
 
 	overflow: hidden;
+	
+	transition: ease .5s;
 
 	.modals__arrow{
 		opacity: 0;
@@ -145,6 +198,7 @@
 
 	// animate in
 	&.mfp-ready{
+		transition: ease .5s;
 		.modals__arrow{
 			opacity: 1;
 		}
@@ -156,6 +210,7 @@
 
 	// animate out
 	&.mfp-removing{
+		transition: ease .5s;
 		.modals__arrow{
 			opacity: 0;
 		}

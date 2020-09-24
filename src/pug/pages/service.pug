@@ -27,7 +27,7 @@ block content
 									img(src="/app/img/logo.svg")
 								+e.box-name.h3 ВАШ-ИСК.РФ
 							+e.box-scale
-								+e.box-strip.js-animateme.is-animate(data-animate-class="show",animate-offset="200",style="width: 27%")
+								+e.box-strip.js-scroll-animateme.is-animate(data-animate-class="show",data-animate-offset="200",style="width: 27%")
 							+e.box-text.p
 								strong 2 390 
 								| руб.
@@ -38,7 +38,7 @@ block content
 									img(src="/app/img/logo.svg")
 								+e.box-name.h3 ВАШ-ИСК.РФ
 							+e.box-scale
-								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="400",animate-offset="200",style="width: 18%")
+								+e.box-strip.js-scroll-animateme.is-animate(data-animate-class="show",data-animate-delay="600",data-animate-offset="200",style="width: 10%")
 							+e.box-text.p
 								strong 10 — 20 минут
 						+e.box
@@ -46,7 +46,7 @@ block content
 								+e.box-icon
 								+e.box-name.p Через адвоката
 							+e.box-scale
-								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="800",animate-offset="200",style="width: 50%")
+								+e.box-strip.js-scroll-animateme.is-animate(data-animate-class="show",data-animate-offset="100",style="width: 100%")
 							+e.box-text.p
 								strong 5 734 
 								| руб. в среднем по
@@ -57,9 +57,9 @@ block content
 								+e.box-icon
 								+e.box-name.p Через адвоката
 							+e.box-scale
-								+e.box-strip.js-animateme.is-animate(data-animate-class="show",data-animate-delay="1200",animate-offset="200",style="width: 35%")
+								+e.box-strip.js-scroll-animateme.is-animate(data-animate-class="show",data-animate-delay="600",data-animate-offset="100",style="width: 100%")
 							+e.box-text.p
-								| от 5-ти рабочих
+								| от 5-ти рабочих 
 								strong дней
 	+b.work
 		+e.wrap.wrap
@@ -107,57 +107,80 @@ block content
 						+e.H3.box-title.h3 Выберите ваш пол:
 						+e.list
 							+e.item.flex._vertical
-								+e.LABEL.radio.radio__
-									+e.INPUT.input(type="radio", name="gender")
+								+e.LABEL.radio.radio__.js-gender
+									+e.INPUT.input(type="radio", name="gender", value="Мужской")
 									+e.icon
 									+e.text Мужской
-								+e.LABEL.radio.radio__
-									+e.INPUT.input(type="radio", name="gender")
+								+e.LABEL.radio.radio__.js-gender
+									+e.INPUT.input(type="radio", name="gender", value="Женский")
 									+e.icon
 									+e.text Женский
 					+e.box
 						+e.H3.box-title.h3 Выберите пункты, описывающие вашу ситуацию:
-						+e.list
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text Супруга признана безвестно отсутствующей
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text Супруга признана судом недееспособной
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text Супруга осуждена и отбывает наказание за преступление сроком свыше трех лет
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text Супруга беременна
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text В браке есть дети возрастом до одного года
-							+e.item.flex._vertical
-								+e.LABEL.radio.checkbox__
-									+e.INPUT.input(type="checkbox", name="")
-									+e.icon
-									+e.text
-										strong Ничего из перечисленного выше
-					+e.box
+						+e.points
+							+e.list
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруга признана безвестно отсутствующей
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруга признана судом недееспособной
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруга осуждена и отбывает наказание за преступление сроком свыше трех лет
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруга беременна
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text В браке есть дети возрастом до одного года
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input.js-not-value(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text
+											strong Ничего из перечисленного выше
+							+e.list
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруг признан безвестно отсутствующем
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруг признан судом недееспособным
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text Супруг осужден и отбывает наказание за преступление сроком свыше трех лет
+								+e.item.flex._vertical
+									+e.LABEL.radio.checkbox__
+										+e.INPUT.input.js-not-value(type="checkbox", name="" disabled)
+										+e.icon
+										+e.text
+											strong Ничего из перечисленного выше
+					+e.box._child.is-hidden
 						+e.H3.box-title.h3 В браке есть дети до 18 лет? 
 						+e.list
 							+e.item.flex._vertical
-								+e.LABEL.radio.radio__
+								+e.LABEL.radio.radio__.js-child-radio
 									+e.INPUT.input(type="radio", name="child")
 									+e.icon
 									+e.text Да
-								+e.LABEL.radio.radio__
+								+e.LABEL.radio.radio__.js-child-radio
 									+e.INPUT.input(type="radio", name="child")
 									+e.icon
 									+e.text Нет
@@ -167,7 +190,7 @@ block content
 						+e.list._fields
 							+e.item
 								+e.field.field__._phone
-									+e.INPUT.input(name="phone", type="tel", placeholder="Введите телефон")
+									+e.INPUT.input.js-phone-input(name="phone", type="tel", placeholder="Введите телефон")
 									+e.icon._phone
 										+icon('phone')
 								+e.success.css-color-green.p.js-sucsess Номер подтвержден
@@ -175,7 +198,7 @@ block content
 								+e.item-text Минутку, код подтверждения отправлен на указанный номер
 								+e.field.field__._phone
 									+e.INPUT.input(name="sms", type="text", placeholder="Введите код из смс")
-							+e.item
+							+e.item.js-phone-btn.is-hidden-btn
 								+button(class='_middle _white js-confirm-number', type="button") Подтвердить Номер
 							+e.item
 								+e.LABEL.radio.checkbox__

@@ -6,19 +6,21 @@
 		height: 54px;
 		padding: 0 15px;
 		font-size: 16px;
+		line-height: 1;
+		padding-top: 15px;
 		border: 1px solid #AAC8E6;
 		border-radius: 5px;
 		color: $blue;
 		letter-spacing: -0.03em;
 		transition: ease .2s;
 		&::placeholder {
-			color: #AAC8E6;
+			color: transparent;
 		}
 		&:focus {
-			border: 0;
+			border-color: transparent;
 			filter: drop-shadow(0px 10px 10px rgba(199, 215, 226, 0.25));
 			border-bottom: 2px solid $blue;
-			& + .field__icon_phone, & + .field__icon-user {
+			& + .field__icon_phone, & + .field__icon-user, & + .field__icon-lock {
 				fill: $blue;
 			}
 			& + .field__icon-email {
@@ -27,12 +29,44 @@
 			& + .field__icon-location {
 				fill: $blue;
 			}
+			& + .field__mask, & + * + .field__mask, & + * + * + .field__mask {
+				font-size: 11px;
+				bottom: 35px;
+			}
 		}
 		&_textarea {
 			height: 170px;
 			overflow: hidden;
 			resize: none;
-			padding-top: 15px;
+			padding-top: 25px;
+			& + .field__mask {
+				bottom: 133px;
+			}
+			&:focus {
+				& + .field__mask {
+					bottom: 150px;
+				}
+			}
+		}
+	}
+	&.is-error {
+		.field__input {
+			border-color: transparent;
+			filter: drop-shadow(0px 10px 10px rgba(199, 215, 226, 0.25));
+			border-bottom: 2px solid #F23C29;
+		}
+	}
+	&__mask {
+		font-size: 16px;
+		line-height: 1;
+		color: #AAC8E6;
+		position: absolute;
+		left: 15px;
+		bottom: 20px;
+		transition: ease .2s;
+		&.is-focus {
+			font-size: 11px;
+			bottom: 35px;
 		}
 	}
 	&__icon {
@@ -80,6 +114,14 @@
 		bottom: 17px;
 		width: 14px;
 		height: 19px;
+		fill: #AAC8E6;
+	}
+	&__icon-lock {
+		position: absolute;
+		right: 17px;
+		bottom: 17px;
+		width: 17px;
+		height: 20px;
 		fill: #AAC8E6;
 	}
 	&__help {

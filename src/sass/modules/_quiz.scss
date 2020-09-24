@@ -1,5 +1,5 @@
 .quiz {
-	overflow: hidden;
+	//overflow: hidden;
 	&__header {
 		background: $blue;
 		height: 114rem;
@@ -19,6 +19,7 @@
 	&__body {
 		padding-bottom: 120rem;
 		background: #F0F4F8;
+		position: relative;
 		&-wrap {
 			z-index: auto;
 		}
@@ -117,6 +118,7 @@
 			-webkit-flex-direction: column;
 			-ms-flex-direction: column;
 			flex-direction: column;
+			position: relative;
 		}
 		&_right {
 			text-align: center;
@@ -140,6 +142,8 @@
 		-webkit-flex: 0 0 auto;
 		-ms-flex: 0 0 auto;
 		flex: 0 0 auto;
+		position: relative;
+		z-index: 5;
 		&_gray {
 			background: #FAFBFD;
 			padding-top: 40px;
@@ -155,7 +159,8 @@
 		-webkit-flex: 1 0 auto;
 		-ms-flex: 1 0 auto;
 		flex: 1 0 auto;
-		position: relative;
+		position: sticky;
+		bottom: 15px;
 	}
 	
 	&__radio {
@@ -169,6 +174,7 @@
 	
 	&__step {
 		position: relative;
+		z-index: 10;
 		&:not(:first-child) {
 			display: none;
 		}
@@ -262,6 +268,9 @@
 		
 		&__column {
 			width: 100%;
+			&_left {
+				position: static;
+			}
 			&_right {
 				margin-top: 40px;
 			}

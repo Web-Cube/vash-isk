@@ -12,6 +12,10 @@
 		&:checked + .checkbox__icon + .checkbox__text {
 			color: $blue;
 		}
+		&:disabled + .checkbox__icon + .checkbox__text {
+			color: transparent;
+   			text-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
 	}
 	&__icon {
 		width: 20px;

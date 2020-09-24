@@ -10,12 +10,28 @@
 					+e.logo-desc.small Портал составления исковых заявлений
 			+e.right.flex._vertical._right
 				+e.select
-					select(name="for")
-						option(checked="checked") Для граждан
-						option Для юр. лиц
-						option Для физ. лиц
+					+e.select-text Для граждан
 					+e.select-arrow
 						+icon('down')
+					+e.select-list
+						+e.A.select-item.is-active.js-modal(href="#form1") 
+							+e.select-icon
+								+icon('check')
+							+e.select-name Для граждан
+							+e.select-icon2
+								+icon('arrowRight')
+						+e.A.select-item.js-modal(href="#form2") 
+							+e.select-icon
+								+icon('check')
+							+e.select-name Для адвокатов
+							+e.select-icon2
+								+icon('arrowRight')
+						+e.A.select-item.js-modal(href="#form3") 
+							+e.select-icon
+								+icon('check')
+							+e.select-name Для судей
+							+e.select-icon2
+								+icon('arrowRight')
 				+e.location
 					+e.location-icon
 						+icon('location')

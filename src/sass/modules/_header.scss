@@ -1,5 +1,10 @@
 .header {
 	padding: 21rem 0 21rem 0;
+	position: relative;
+	z-index: 100;
+	&__wrap {
+		z-index: auto;
+	}
 	&_blue {
 		color: #fff;
 		background: $blue;
@@ -66,6 +71,14 @@
 	}
 	&__select {
 		position: relative;
+		cursor: pointer;
+		&.is-active {
+			.header__select-list {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+		}
 		select {
 			-webkit-appearance: none;
 			-moz-appearance: none;
@@ -79,6 +92,12 @@
 			font-family: 'Inter';
 			letter-spacing: -0.01em;
 		}
+		&-text {
+			font-size: 14rem;
+			line-height: 17/14*1;
+			letter-spacing: -0.01em;
+			padding-right: 17rem;
+		}
 		&-arrow {
 			width: 12rem;
 			height: 6em;
@@ -89,6 +108,63 @@
 			right: 0;
 			top: 50%;
 			margin-top: -2rem;
+		}
+		&-list {
+			position: absolute;
+			left: -40rem;
+			z-index: 100;
+			width: 180rem;
+			background: #fff;
+			top: 100%;
+			margin-top: 18rem;
+			box-shadow: 0px 20px 20px rgba(199, 215, 226, 0.5);
+			width: 190rem;
+			padding: 15rem;
+			transition: ease .3s;
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-5px);
+		}
+		&-item {
+			display: flex;
+			position: relative;
+			align-items: center;
+			font-size: 14rem;
+			line-height: 17/14*1;
+			letter-spacing: -0.01em;
+			color: $default;
+			&:not(:last-child) {
+				margin-bottom: 20rem;
+			}
+			&.is-active {
+				color: $blue;
+				.header__select-icon {
+					opacity: 1;
+				}
+				.header__select-icon2 {
+					opacity: 0;
+				}
+			}
+		}
+		&-icon {
+			width: 16rem;
+			min-width: 16rem;
+			height: 13rem;
+			fill: none;
+			stroke: $blue;
+			margin-right: 8rem;
+			opacity: 0;
+		}
+		&-icon2 {
+			width: 8rem;
+			height: 16rem;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			fill: none;
+			stroke: $blue;
+			stroke-width: 2;
+			transform: translateY(-40%);
 		}
 	}
 	&__location {
@@ -147,6 +223,15 @@
 		&__select {
 			margin-top: 0;
 			order: 1;
+			&-icon {
+				width: 10px;
+				min-width: 10px;
+				height: 10px;
+				margin-right: 5px;
+			}
+			&-list {
+				left: -29px;
+			}
 		}
 		&__location {
 			order: 2;

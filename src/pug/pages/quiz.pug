@@ -11,8 +11,10 @@ block content
 					img(src="/app/img/logo.svg")
 				+e.header-text Форма № АА-478, заявление № 101334
 		+e.body
+			+b.gerb-container
+				+e.wrap.wrap
+					include ../layouts/gerb
 			+e.body-wrap.wrap
-				include ../layouts/gerb
 				+e.top
 					+e.top-list.flex
 						+e.top-item.is-active
@@ -46,7 +48,7 @@ block content
 							+e.column._left
 								+e.box
 									+e.LABEL.radio.radio__
-										+e.INPUT.input(type="radio", name="step1" checked)
+										+e.INPUT.input(type="radio", name="step1")
 										+e.icon
 										+e.text Да
 									+e.LABEL.radio.radio__
@@ -58,7 +60,7 @@ block content
 										+e.icon
 											+icon('arrowLeft')
 										+e.text Назад
-									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+									+e.A.btn._back.btn__._blue._middle.is-hidden.js-next-step(href="#")
 										+e.text Далее
 										+e.icon
 											+icon('arrowRight')
@@ -70,7 +72,7 @@ block content
 							+e.column._left
 								+e.box
 									+e.LABEL.radio.radio__
-										+e.INPUT.input(type="radio", name="step2" checked)
+										+e.INPUT.input(type="radio", name="step2")
 										+e.icon
 										+e.text Да
 									+e.LABEL.radio.radio__
@@ -82,7 +84,7 @@ block content
 										+e.icon
 											+icon('arrowLeft')
 										+e.text Назад
-									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+									+e.A.btn._back.btn__._blue._middle.is-hidden.js-next-step(href="#")
 										+e.text Далее
 										+e.icon
 											+icon('arrowRight')
@@ -94,7 +96,7 @@ block content
 							+e.column._left
 								+e.box
 									+e.LABEL.radio.radio__
-										+e.INPUT.input(type="radio", name="step3" checked)
+										+e.INPUT.input(type="radio", name="step3")
 										+e.icon
 										+e.text Утрата любви и уважения к супругу
 									+e.LABEL.radio.radio__
@@ -114,7 +116,7 @@ block content
 										+e.icon
 											+icon('arrowLeft')
 										+e.text Назад
-									+e.A.btn._back.btn__._blue._middle.js-next-step(href="#")
+									+e.A.btn._back.btn__._blue._middle.is-hidden.js-next-step(href="#")
 										+e.text Далее
 										+e.icon
 											+icon('arrowRight')
@@ -126,17 +128,17 @@ block content
 							+e.column._left
 								+e.box._gray
 									+e.field.field__
-										+e.INPUT.input(name="series", type="text", placeholder="Серия и номер")
+										+e.INPUT.input.js-series(name="series", type="text", placeholder="Серия и номер")
 										+e.icon-user
 											+icon('user')
 									+e.field.field__
-										+e.INPUT.input(name="date", type="text", placeholder="Дата выдачи")
+										+e.INPUT.input.js-date(name="date", type="text", placeholder="Дата выдачи")
 								+e.bottom
 									+e.A.btn._back.btn__._white._middle.js-prev-step(href="#")
 										+e.icon
 											+icon('arrowLeft')
 										+e.text Назад
-									+e.A.btn._back.btn__._blue._middle.js-step-status(href="#")
+									+e.A.btn._back.btn__._blue._middle.is-hidden.js-step-status(href="#")
 										+e.text Далее
 										+e.icon
 											+icon('arrowRight')

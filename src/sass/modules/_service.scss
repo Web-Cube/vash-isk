@@ -172,6 +172,7 @@
 			padding: 30rem;
 			border-radius: 10px;
 			background: #E4F0FC;
+			position: relative;
 			&:not(:last-child) {
 				margin-bottom: 20px;
 			}
@@ -193,6 +194,22 @@
 			&.is-hidden {
 				opacity: .5;
 				transition: ease .3s;
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		&__points {
+			.service-form__list {
+				&:not(:first-child) {
+					display: none;
+				}
 			}
 		}
 		&__list {
@@ -209,7 +226,7 @@
 				margin-bottom: 10px;
 			}
 			
-			&_hidden {
+			&_hidden, &.is-hidden-btn {
 				display: none;
 			}
 		}
@@ -238,7 +255,6 @@
 			width: 275px;
 			margin-top: 30px;
 		}
-		
 	}
 	
 	@include max-screen($large_tablet) {
