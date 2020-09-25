@@ -11,19 +11,19 @@ var forms = {
 		var im = new Inputmask({
 			mask: "+7 (999) 999-99-99",
 			clearMaskOnLostFocus: true,
-			clearIncomplete: true,
+			clearIncomplete: false,
 		});
 		
 		var seriesMask = new Inputmask({
 			mask: "99 999999",
 			clearMaskOnLostFocus: true,
-			clearIncomplete: true,
+			clearIncomplete: false,
 		});
 		
 		var dateMask = new Inputmask({
 			mask: "99.99.9999",
 			clearMaskOnLostFocus: true,
-			clearIncomplete: true,
+			clearIncomplete: false,
 		});
 
 		im.mask(phone);

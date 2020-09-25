@@ -205,6 +205,10 @@
 				}
 			}
 		}
+		.is-blur {
+			color: transparent;
+   			text-shadow: 0 0 5px rgba(0,0,0,0.5);
+		}
 		&__points {
 			.service-form__list {
 				&:not(:first-child) {

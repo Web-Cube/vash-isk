@@ -269,9 +269,10 @@ var defaults = {
 			let index = $(this).closest('.radio').index()+1;
 			
 			$('.service-form__points .service-form__list:visible').hide();
-			$('.service-form__points .service-form__list:nth-child(' +index+ ')').fadeIn(300);
+			$('.service-form__points .service-form__list:nth-child(' +index+ ')').fadeIn(500);
 			
 			$('.service-form__points .checkbox__input').removeAttr('disabled');
+			$('.service-form__box_points').removeClass('is-hidden');
 			
 			
 		});

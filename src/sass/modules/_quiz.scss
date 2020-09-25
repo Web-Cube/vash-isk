@@ -265,7 +265,10 @@
 		&__gerb {
 			width: 265px;
 		}
-		
+		&__top {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 		&__column {
 			width: 100%;
 			&_left {
@@ -282,7 +285,6 @@
 			margin-top: 30px;
 		}
 		&__step {
-			padding-bottom: 94px;
 			&_status {
 				padding-bottom: 0;
 			}
@@ -294,10 +296,7 @@
 			}
 		}
 		&__bottom {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
+			margin-top: 30px;
 		}
 	}
 }
